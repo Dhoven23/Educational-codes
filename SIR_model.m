@@ -84,3 +84,10 @@ xlabel('time','Fontsize',20)
 ylabel('normalized values','Fontsize',20)
 title('Model Predictive control for COVID-19, simulation','Fontsize',32)
 
+
+%% write to Excel File
+T = table(t,S_real,I_real,R_real);
+filename = 'SIR_predictive_model.xlsx';
+writetable(T,filename,'Sheet',1,'Range','A1')
+
+
